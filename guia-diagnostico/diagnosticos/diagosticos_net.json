@@ -1,0 +1,34 @@
+{
+  "problema": "Internet lenta ou sem funcionar",
+  "passo_inicial": "1",
+  "passos": {
+    "1": {
+      "pergunta": "O problema afeta todos os seus dispositivos (celular, outro computador) ou apenas este computador?",
+      "opcoes": { "Apenas este computador": "2", "Todos os dispositivos": "3" }
+    },
+    "2": {
+      "pergunta": "Se você conectar este computador via cabo de rede diretamente no roteador, o problema persiste?",
+      "opcoes": { "Sim, mesmo no cabo persiste": "solucao_pc_especifico", "Não, no cabo funciona bem": "solucao_wifi_pc" }
+    },
+    "3": {
+      "pergunta": "Você já tentou reiniciar seu roteador/modem (desligando da tomada por 30 segundos e ligando novamente)?",
+      "opcoes": { "Sim, já reiniciei e não resolveu": "4", "Não, vou tentar agora": "solucao_reiniciar_roteador" }
+    },
+    "4": {
+      "pergunta": "As luzes do seu roteador/modem estão normais (geralmente verdes e sem piscar em vermelho)? Verifique principalmente a luz com o símbolo de globo 🌐 ou 'WAN'.",
+      "opcoes": { "Sim, as luzes parecem normais": "5", "Não, há uma luz vermelha ou apagada": "solucao_sinal_provedor" }
+    },
+    "5": {
+      "pergunta": "Conectando um computador diretamente ao modem com um cabo de rede (ignorando o roteador Wi-Fi, se forem aparelhos separados), a internet funciona?",
+      "opcoes": { "Sim, direto no modem funciona": "solucao_problema_roteador", "Não, nem direto no modem funciona": "solucao_contatar_provedor" }
+    }
+  },
+  "solucoes": {
+    "solucao_pc_especifico": "Diagnóstico: O problema está neste computador específico. Pode ser um problema de driver de rede, um software (antivírus/firewall) bloqueando a conexão ou até mesmo um problema de hardware. Comece atualizando os drivers de rede.",
+    "solucao_wifi_pc": "Diagnóstico: O problema está na conexão Wi-Fi deste computador. A placa de rede sem fio pode estar com problemas ou o sinal pode estar fraco. Tente se aproximar do roteador ou atualizar os drivers da placa Wi-Fi.",
+    "solucao_reiniciar_roteador": "Ação: Reiniciar o roteador resolve a grande maioria dos problemas de lentidão e conectividade. Desligue-o da tomada, aguarde 30 segundos e ligue-o novamente. Aguarde 5 minutos para que ele se reconecte completamente.",
+    "solucao_sinal_provedor": "Diagnóstico: Luzes vermelhas ou apagadas no modem geralmente indicam um problema externo com o sinal do seu provedor de internet. Pode haver uma manutenção na sua região ou uma falha no serviço.",
+    "solucao_problema_roteador": "Diagnóstico: Se a internet funciona direto no modem mas não através do roteador Wi-Fi, o problema está no seu roteador. Tente redefinir o roteador para as configurações de fábrica ou considere substituí-lo.",
+    "solucao_contatar_provedor": "Diagnóstico: Você isolou o problema e tudo indica que a falha é no serviço do seu provedor de internet. Entre em contato com o suporte técnico deles e informe os testes que você já realizou."
+  }
+}

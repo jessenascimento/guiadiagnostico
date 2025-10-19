@@ -1,0 +1,34 @@
+{
+  "problema": "Impressora não está imprimindo",
+  "passo_inicial": "1",
+  "passos": {
+    "1": {
+      "pergunta": "A impressora está ligada e com as luzes normais (sem piscar em vermelho)?",
+      "opcoes": { "Sim, está normal": "2", "Não, está desligada ou com erro": "solucao_energia" }
+    },
+    "2": {
+      "pergunta": "O dispositivo que está enviando a impressão está na mesma rede (Wi Fi ou cabo) que a impressora?",
+      "opcoes": { "Sim, estão na mesma rede": "3", "Não, estão em redes diferentes": "solucao_rede" }
+    },
+    "3": {
+      "pergunta": "Você consegue imprimir uma página de teste diretamente pelo painel da impressora?",
+      "opcoes": { "Sim, a página de teste imprimiu": "4", "Não, nem a página de teste funciona": "solucao_hardware" }
+    },
+    "4": {
+      "pergunta": "O driver da impressora está instalado corretamente no computador e ela aparece como 'Pronta'?",
+      "opcoes": { "Sim, o driver está OK": "5", "Não, está offline ou com erro": "solucao_driver" }
+    },
+    "5": {
+      "pergunta": "Você já tentou limpar a fila de impressão e reiniciar tanto o computador quanto a impressora?",
+      "opcoes": { "Sim, já fiz isso e não resolveu": "solucao_avancada", "Não, vou tentar agora": "solucao_reiniciar" }
+    }
+  },
+  "solucoes": {
+    "solucao_energia": "Diagnóstico: Problema físico ou de energia. Verifique se a impressora está conectada na tomada, se o cabo está firme e se não há luzes de erro. Se houver, consulte o manual da impressora para o código do erro.",
+    "solucao_rede": "Diagnóstico: Problema de conectividade. Garanta que o computador e a impressora estejam conectados na mesma rede. Se for Wi-Fi, verifique se ambos estão conectados no mesmo nome de rede.",
+    "solucao_hardware": "Diagnóstico: A falha provavelmente é no hardware da impressora (tinta, papel, atolamento, etc.). Verifique os suprimentos e se há algum papel preso.",
+    "solucao_driver": "Diagnóstico: Problema de software no computador. Reinstale o driver da impressora. Certifique-se de baixar a versão mais recente do site oficial do fabricante.",
+    "solucao_reiniciar": "Ação: Limpe a fila de impressão no seu computador, reinicie o computador e a impressora (desligando-a da tomada por 30 segundos). Esta ação resolve a maioria dos problemas de comunicação travados.",
+    "solucao_avancada": "Diagnóstico: O problema é mais complexo. O spooler de impressão do Windows pode estar com problemas ou pode haver um conflito de software. Acione o Suporte Nível 2 para uma análise mais detalhada."
+  }
+}

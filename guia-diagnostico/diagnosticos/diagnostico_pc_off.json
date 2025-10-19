@@ -1,0 +1,34 @@
+{
+  "problema": "Computador não está ligando",
+  "passo_inicial": "1",
+  "passos": {
+    "1": {
+      "pergunta": "O computador está completamente 'morto' (nenhuma luz, nenhum barulho) ou ele faz algum barulho/acende alguma luz mas não mostra imagem?",
+      "opcoes": { "Completamente morto": "2", "Faz barulho/acende luz": "4" }
+    },
+    "2": {
+      "pergunta": "Você já verificou se o cabo de energia está firmemente conectado tanto na tomada quanto na fonte do computador (e no caso de notebooks, na fonte externa)?",
+      "opcoes": { "Sim, verifiquei e está tudo firme": "3", "Não, vou verificar agora": "solucao_cabo_solto" }
+    },
+    "3": {
+      "pergunta": "Você já testou ligar outro aparelho, como um carregador de celular na mesma tomada para confirmar que a tomada tem energia?",
+      "opcoes": { "Sim, a tomada está funcionando": "solucao_fonte_energia", "Não, a tomada está sem energia": "solucao_problema_eletrico" }
+    },
+    "4": {
+      "pergunta": "O monitor está ligado e com o cabo de vídeo (HDMI, DisplayPort, VGA) bem conectado tanto no monitor quanto no computador?",
+      "opcoes": { "Sim, está tudo bem conectado": "5", "Não, vou verificar os cabos": "solucao_cabo_video" }
+    },
+    "5": {
+      "pergunta": "O computador emite algum 'bipe' em sequência quando você tenta ligá-lo (ex: um bipe longo e dois curtos)?",
+      "opcoes": { "Sim, ele emite bipes": "solucao_bipe_memoria", "Não, ele apenas faz o barulho normal das ventoinhas": "solucao_sem_video" }
+    }
+  },
+  "solucoes": {
+    "solucao_cabo_solto": "Ação: Verifique todas as conexões do cabo de energia. Um cabo solto é a causa mais comum para o computador não dar nenhum sinal de vida. Se for um desktop, verifique também se o interruptor na parte de trás da fonte (geralmente 'I/O') está na posição 'I'.",
+    "solucao_problema_eletrico": "Diagnóstico: O problema não é no pc, mas sim na rede elétrica. Verifique o disjuntor ou teste em outra tomada que você saiba que está funcionando.",
+    "solucao_fonte_energia": "Diagnostico: Se a tomada e os cabos estão OK, a causa mais provável é uma falha na fonte de alimentação (PSU) do computador. A fonte pode ter queimado e precisará ser substituída.",
+    "solucao_cabo_video": "Diagnóstico: O computador pode estar ligando, mas não enviando imagem. Verifique se o monitor está ligado na tomada correta e se o cabo de vídeo está firme nas duas pontas. Monitores modernos muitas vezes precisam ter a 'fonte de entrada' (Input) selecionada corretamente (HDMI 1, DisplayPort, etc.).",
+    "solucao_bipe_memoria": "Diagnóstico: Bipes em sequência são códigos de erro da placa-mãe, geralmente indicando um problema com a memória RAM. Pode ser um pente de memória mal encaixado ou defeituoso. Acione o suporte técnico para uma análise de hardware.",
+    "solucao_sem_video": "Diagnóstico: Se o computador liga (ventoinhas giram, luzes acendem) mas não dá imagem nem bipes, o problema pode ser mais complexo, envolvendo placa de vídeo, processador ou placa-mãe. Requer uma análise técnica de hardware aprofundada."
+  }
+}
