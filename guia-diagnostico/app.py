@@ -2,8 +2,11 @@ import streamlit as st
 import json
 import os
 
+CAMINHO_ATUAL = os.path.dirname(__file__)
+PASTA_DIAGNOSTICOS = os.path.join(CAMINHO_ATUAL, 'diagnosticos')
+
 #funções complementares
-def carregar_diagnosticos(pasta='diagnosticos'):
+def carregar_diagnosticos(pasta):
     #carrega todos os arquivos de diagnóstico .json da pasta especificada.
     diagnosticos = {}
     for nome_arquivo in os.listdir(pasta):
@@ -52,7 +55,7 @@ def executar_guia(logica):
 st.set_page_config(page_title="Guia de Diagnóstico de TI", layout="centered")
 st.title("Assistente de Suporte de TI 🛠️")
 
-todos_diagnosticos = carregar_diagnosticos()
+todos_diagnosticos = carregar_diagnosticos(PASTA_DIAGNOSTICOS)
 
 # menu principal
 if 'diagnostico_selecionado' not in st.session_state:
